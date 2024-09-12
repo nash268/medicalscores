@@ -36,12 +36,12 @@ MenuFunction();
 
 function tbScore(){
 
-    const scorelist = document.getElementById('scoreList');
-    const tbscore = document.getElementById('tbScore');
+    const scorelist = document.getElementById('score-list');
+    const tbscore = document.getElementById('tb-score');
     const backbutton = document.getElementById('back-button');
-    scorelist.style="display:none;"
-    tbscore.style="display:block;"
-    backbutton.style="display:-webkit-inline-box;"
+    scorelist.style="display:none;" ;
+    tbscore.style="display:-webkit-inline-box;" ;
+    backbutton.style="display:-webkit-inline-box;" ;
 
     function calculateSum() {
         // Get all checkboxes with class 'sum-checkbox'
@@ -68,3 +68,10 @@ function tbScore(){
     
 
 };
+
+function goBack(){
+    const scoresDisplay = document.querySelector('.scores-display');
+    const scoreList = document.querySelector('#score-list')
+    scoresDisplay.style = "display: none;";
+    scoreList.style = "display: relative";
+}
