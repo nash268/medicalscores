@@ -1,1 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#007bff" />
+  <title>Solar Sight</title>
+  <link rel="icon" type="image/png" href="/public/assets/eye-256px.png" size="256x256" /> 
+  <link rel="icon" type="image/png" href="/public/assets/eye-512px.png" size="512x512" />
+  <link rel="manifest" href="/public/manifest.json" crossorigin="use-credentials" />
+  <link href='/src/styles/style.css' rel='stylesheet' />
+</head>
+<body>
 
+  <div class="container">
+    <header>
+      <button id="open-menu" class="button">
+        <div class="menu-toggle">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>        
+      </button>
+
+      <!-- The modal -->
+      <div id="menu-modal" class="modal">
+
+        <!-- Modal content -->
+        <span id="close-menu" class="close" >&times;</span>
+        <div class="modal-content">
+            <!--Contents of menu here, about, resources etc-->
+
+        </div>
+
+      </div>
+      <h1>Medical Scores</h1>
+    </header>
+    <div class="saved-times-display" id="saved-times-display" >
+      <!-- To-Do Items will be dynamically added here -->
+    </div>
+  </div>
+  <footer>
+    </div>
+  </footer>
+
+
+<!-- Scripts below -->
+  <script defer type="text/javascript" src="/src/scripts/main.js"></script>
+  <script defer type="text/javascript" src="/src/scripts/timer.js"></script>
+</body>
+<script>
+
+// Service Worker registration (for PWA)
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/public/service-worker.js')
+    .then((registration) => {
+      console.log('Service Worker registered with scope:', registration.scope);
+    })
+    .catch((error) => {
+      console.error('Error registering Service Worker:', error);
+    });
+  });
+}
+
+</script>
+</html>
