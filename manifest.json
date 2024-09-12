@@ -1,15 +1,17 @@
 {
     "short_name": "Medscores",
     "name": "Medical Scores",
-    "icons": [
-      {
-        "src": "medical-scores.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
-    ],
-    "start_url": "/medicalscores",
+    "scope": "/medicalscores/",
+    "start_url": "/medicalscores/",
     "display": "standalone",
     "theme_color": "#007bff",
-    "background_color": "#ffffff"
+    "background_color": "#ffffff",
+
+    "icons": [
+        {
+          "src": "/medicalscores/medical-scores.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
   }
