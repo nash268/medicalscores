@@ -35,12 +35,119 @@
       </div>
       <h1>Medical Scores</h1>
     </header>
-    <div class="saved-times-display" id="saved-times-display" >
-      <!-- To-Do Items will be dynamically added here -->
+    <div class="container-display" id="scoreList">
+      <div class="todo-item" onclick="tbScore()">PPA TB Scoring</div>
+    </div>
+    <div class="container-display" id="tbScore" style="display: none;">
+      <table border="1" style="margin-bottom: 10%;">
+        <tr>
+          <th colspan="5">DIAGNOSING AND MANAGING CHILDHOOD TB</th>
+        </tr>
+        <tr>
+          <th colspan="5">Table 1: Pakistan Pediatrics Association Scoring Chart (REVISED 2016)</th>
+        </tr>
+        <tr>
+          <th> </th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td>&lt; 5 years<input type="checkbox" name="age" value="1"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Close Contact*</td>
+          <td>TB suggestive <input type="checkbox" name="age" value="1"></td>
+          <td>B –ve (Clinically diagnosed TB) <input type="checkbox" name="age" value="2"></td>
+          <td>B+ve (Bacteriological positive) <input type="checkbox" name="age" value="3"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>PEM/SAM**</td>
+          <td>Yes <input type="checkbox" name="age" value="1"></td>
+          <td>Not responding to Nutritional rehabilitation for 02 months <input type="checkbox" name="age" value="2"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>H/O Measles, Whooping Cough</td>
+          <td>3-6 months <input type="checkbox" name="age" value="1"></td>
+          <td>&lt; 3 months <input type="checkbox" name="age" value="2"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>HIV</td>
+          <td></td>
+          <td>Yes <input type="checkbox" name="age" value="2"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Immuno-compromised ***</td>
+          <td>Yes <input type="checkbox" name="age" value="1"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Clinical Manifestation ****</td>
+          <td></td>
+          <td>Suggestive <input type="checkbox" name="age" value="2"></td>
+          <td></td>
+          <td>Strongly suggestive <input type="checkbox" name="age" value="4"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Radio Diagnostic Imaging *****</td>
+          <td>Non-specific <input type="checkbox" name="age" value="1"></td>
+          <td>Suggestive of TB <input type="checkbox" name="age" value="2"></td>
+          <td>Strongly suggestive <input type="checkbox" name="age" value="3"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Tuberculin Skin / PPD Testing</td>
+          <td>5-10 mm <input type="checkbox" name="age" value="1"></td>
+          <td></td>
+          <td>&gt; 10mm <input type="checkbox" name="age" value="3"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Xpert Test</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Positive for TB <input type="checkbox" name="age" value="5"></td>
+        </tr>
+        <tr>
+          <td>Granuloma</td>
+          <td>Non-specific <input type="checkbox" name="age" value="1"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Positive for TB <input type="checkbox" name="age" value="5"></td>
+        </tr>
+      </table>
+      <h3>score: </h3>
     </div>
   </div>
   <footer>
-    </div>
+    <a class="button" style="display:none;" onclick="goBack()" id="back-button"> &#8592; Back</a>
   </footer>
 
 

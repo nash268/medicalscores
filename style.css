@@ -25,7 +25,7 @@
     margin-bottom: 10px;
   }
   
-  .saved-times-display {
+  .container-display {
     background-color: #fff;
     border-radius: 5px;
     padding: 20px;
@@ -79,7 +79,7 @@
   }
   
   #open-menu {
-    position: fixed;
+    position: absolute;
     left: 24px;
     top: 2px;
   }

@@ -33,3 +33,14 @@ function MenuFunction(){
 }
 
 MenuFunction();
+
+function tbScore(){
+    alert("clicked");
+    const scorelist = document.getElementById('scoreList');
+    const tbscore = document.getElementById('tbScore');
+    const backbutton = document.getElementById('back-button');
+    scorelist.style="display:none;"
+    tbscore.style="display:block;"
+    backbutton.style="display:-webkit-inline-box;"
+
+};
