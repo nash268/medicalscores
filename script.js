@@ -42,6 +42,7 @@ function tbScore(){
     scorelist.style="display:none;" ;
     tbscore.style="display:-webkit-inline-box;" ;
     backbutton.style="display:-webkit-inline-box;" ;
+    document.querySelector('header').hidden = true;
 
     function calculateSum() {
         // Get all checkboxes with class 'sum-checkbox'
@@ -76,4 +77,5 @@ function goBack(){
     scoresDisplay.style = "display: none;";
     scoreList.style = "display: relative";
     backbutton.style = "display: none";
+    document.querySelector('header').hidden = false;
 }
