@@ -60,6 +60,21 @@ function tbScore(){
     
         // Display the result
         document.getElementById('tb-score-result').textContent = 'Score: ' + sum;
+
+        // interpretation
+        const interpretation = document.getElementById('interpretation');
+        if (sum < 3){
+            interpretation.textContent = "Unlikely TB - Investigate other reasons of illness";
+        }else 
+        if (sum == 3 || sum == 4) {
+            interpretation.textContent = "Possible TB - Do not treat for TB, Manage the presenting symptom(s), Monitor monthly the condition(s) for 3 months using scoring chart";
+        }else
+        if (sum == 5 || sum == 6){
+            interpretation.textContent = "Possible TB - Investigate and exclude other causes of illness, Investigaion may jusify therapy, Start ATT if positive on GeneXpert or Granuloma seen";
+        }else
+        if (sum >= 7){
+            interpretation.textContent = "Probable TB - confirm (if possible)";
+        }
     }
 
     // Add event listeners to all checkboxes
@@ -67,6 +82,16 @@ function tbScore(){
         checkbox.addEventListener('click', calculateSum);
     });
     
+
+    const closeContactExplanation = "Close Contact: history of cough for more than 2 weeks among the household of child (score 1), contact tracing is required B-ve TB patients among the households (score 2), may or may not be receiving/completed anti tuberculous treatment households B+ve TB patient among the (score 3). May or may not be receiving/completed anti tuberculous treatment";
+    document.getElementById("close-contact").addEventListener('click', () => {
+        alert(closeContactExplanation);
+    });
+
+    const pemsamExplanation = "(Protein Energy Malnutriion/Severe acute malnutrition) Use WHO Recommended Z. Scoring chart Not responding to Nutritional rehabilitation for 02 months";
+    document.getElementById("pem-sam").addEventListener('click', () => {
+        alert(pemsamExplanation);
+    });
 
 };
 
