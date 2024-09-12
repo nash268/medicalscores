@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#007bff" />
   <title>Medical Scores</title>
-  <link rel="icon" type="image/png" href="/public/assets/eye-256px.png" size="256x256" /> 
-  <link rel="icon" type="image/png" href="/public/assets/eye-512px.png" size="512x512" />
-  <link rel="manifest" href="/public/manifest.json" crossorigin="use-credentials" />
+  <link rel="canonical" href="https://nash268.github.io/medicalscores/" />
+  <link rel="manifest" href="/medicalscores/manifest.json" crossorigin="use-credentials" />
   <link href='style.css' rel='stylesheet' />
 </head>
 <body>
@@ -161,7 +160,7 @@
 // Service Worker registration (for PWA)
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/public/service-worker.js')
+    navigator.serviceWorker.register('/medicalscores/service-worker.js')
     .then((registration) => {
       console.log('Service Worker registered with scope:', registration.scope);
     })

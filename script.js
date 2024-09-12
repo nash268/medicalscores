@@ -59,7 +59,7 @@ function tbScore(){
         });
     
         // Display the result
-        document.getElementById('tb-score-result').textContent = 'Sum: ' + sum;
+        document.getElementById('tb-score-result').textContent = 'Score: ' + sum;
     }
 
     // Add event listeners to all checkboxes
