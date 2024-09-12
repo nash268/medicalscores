@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#007bff" />
-  <title>Solar Sight</title>
+  <title>Medical Scores</title>
   <link rel="icon" type="image/png" href="/public/assets/eye-256px.png" size="256x256" /> 
   <link rel="icon" type="image/png" href="/public/assets/eye-512px.png" size="512x512" />
   <link rel="manifest" href="/public/manifest.json" crossorigin="use-credentials" />
@@ -39,12 +39,12 @@
       <div class="todo-item" onclick="tbScore()">PPA TB Scoring</div>
     </div>
     <div class="container-display" id="tbScore" style="display: none;">
-      <table border="1" style="margin-bottom: 10%;">
+      <table border="1" style="margin-bottom: 20%;">
         <tr>
-          <th colspan="5">DIAGNOSING AND MANAGING CHILDHOOD TB</th>
+          <th colspan="6">DIAGNOSING AND MANAGING CHILDHOOD TB</th>
         </tr>
         <tr>
-          <th colspan="5">Table 1: Pakistan Pediatrics Association Scoring Chart (REVISED 2016)</th>
+          <th colspan="6">Table 1: Pakistan Pediatrics Association Scoring Chart (REVISED 2016)</th>
         </tr>
         <tr>
           <th> </th>
@@ -56,7 +56,7 @@
         </tr>
         <tr>
           <td>Age</td>
-          <td>&lt; 5 years<input type="checkbox" name="age" value="1"></td>
+          <td>&lt; 5 years<input type="checkbox" class="tb-boxes" value="1"></td>
           <td></td>
           <td></td>
           <td></td>
@@ -64,24 +64,24 @@
         </tr>
         <tr>
           <td>Close Contact*</td>
-          <td>TB suggestive <input type="checkbox" name="age" value="1"></td>
-          <td>B –ve (Clinically diagnosed TB) <input type="checkbox" name="age" value="2"></td>
-          <td>B+ve (Bacteriological positive) <input type="checkbox" name="age" value="3"></td>
+          <td>TB suggestive <input type="checkbox" class="tb-boxes" value="1"></td>
+          <td>B –ve (Clinically diagnosed TB) <input type="checkbox" class="tb-boxes" value="2"></td>
+          <td>B+ve (Bacteriological positive) <input type="checkbox" class="tb-boxes" value="3"></td>
           <td></td>
           <td></td>
         </tr>
         <tr>
           <td>PEM/SAM**</td>
-          <td>Yes <input type="checkbox" name="age" value="1"></td>
-          <td>Not responding to Nutritional rehabilitation for 02 months <input type="checkbox" name="age" value="2"></td>
+          <td>Yes <input type="checkbox" class="tb-boxes" value="1"></td>
+          <td>Not responding to Nutritional rehabilitation for 02 months <input type="checkbox" class="tb-boxes" value="2"></td>
           <td></td>
           <td></td>
           <td></td>
         </tr>
         <tr>
           <td>H/O Measles, Whooping Cough</td>
-          <td>3-6 months <input type="checkbox" name="age" value="1"></td>
-          <td>&lt; 3 months <input type="checkbox" name="age" value="2"></td>
+          <td>3-6 months <input type="checkbox" class="tb-boxes" value="1"></td>
+          <td>&lt; 3 months <input type="checkbox" class="tb-boxes" value="2"></td>
           <td></td>
           <td></td>
           <td></td>
@@ -89,14 +89,14 @@
         <tr>
           <td>HIV</td>
           <td></td>
-          <td>Yes <input type="checkbox" name="age" value="2"></td>
+          <td>Yes <input type="checkbox" class="tb-boxes" value="2"></td>
           <td></td>
           <td></td>
           <td></td>
         </tr>
         <tr>
           <td>Immuno-compromised ***</td>
-          <td>Yes <input type="checkbox" name="age" value="1"></td>
+          <td>Yes <input type="checkbox" class="tb-boxes" value="1"></td>
           <td></td>
           <td></td>
           <td></td>
@@ -105,24 +105,24 @@
         <tr>
           <td>Clinical Manifestation ****</td>
           <td></td>
-          <td>Suggestive <input type="checkbox" name="age" value="2"></td>
+          <td>Suggestive <input type="checkbox" class="tb-boxes" value="2"></td>
           <td></td>
-          <td>Strongly suggestive <input type="checkbox" name="age" value="4"></td>
+          <td>Strongly suggestive <input type="checkbox" class="tb-boxes" value="4"></td>
           <td></td>
         </tr>
         <tr>
           <td>Radio Diagnostic Imaging *****</td>
-          <td>Non-specific <input type="checkbox" name="age" value="1"></td>
-          <td>Suggestive of TB <input type="checkbox" name="age" value="2"></td>
-          <td>Strongly suggestive <input type="checkbox" name="age" value="3"></td>
+          <td>Non-specific <input type="checkbox" class="tb-boxes" value="1"></td>
+          <td>Suggestive of TB <input type="checkbox" class="tb-boxes" value="2"></td>
+          <td>Strongly suggestive <input type="checkbox" class="tb-boxes" value="3"></td>
           <td></td>
           <td></td>
         </tr>
         <tr>
           <td>Tuberculin Skin / PPD Testing</td>
-          <td>5-10 mm <input type="checkbox" name="age" value="1"></td>
+          <td>5-10 mm <input type="checkbox" class="tb-boxes" value="1"></td>
           <td></td>
-          <td>&gt; 10mm <input type="checkbox" name="age" value="3"></td>
+          <td>&gt; 10mm <input type="checkbox" class="tb-boxes" value="3"></td>
           <td></td>
           <td></td>
         </tr>
@@ -132,18 +132,20 @@
           <td></td>
           <td></td>
           <td></td>
-          <td>Positive for TB <input type="checkbox" name="age" value="5"></td>
+          <td>Positive for TB <input type="checkbox" class="tb-boxes" value="5"></td>
         </tr>
         <tr>
           <td>Granuloma</td>
-          <td>Non-specific <input type="checkbox" name="age" value="1"></td>
+          <td>Non-specific <input type="checkbox" class="tb-boxes" value="1"></td>
           <td></td>
           <td></td>
           <td></td>
-          <td>Positive for TB <input type="checkbox" name="age" value="5"></td>
+          <td>Positive for TB <input type="checkbox" class="tb-boxes" value="5"></td>
+        </tr>
+        <tr>
+          <th colspan="6" id="tb-score-result">Score: </th>
         </tr>
       </table>
-      <h3>score: </h3>
     </div>
   </div>
   <footer>

@@ -35,12 +35,36 @@ function MenuFunction(){
 MenuFunction();
 
 function tbScore(){
-    alert("clicked");
+
     const scorelist = document.getElementById('scoreList');
     const tbscore = document.getElementById('tbScore');
     const backbutton = document.getElementById('back-button');
     scorelist.style="display:none;"
     tbscore.style="display:block;"
     backbutton.style="display:-webkit-inline-box;"
+
+    function calculateSum() {
+        // Get all checkboxes with class 'sum-checkbox'
+        const checkboxes = document.querySelectorAll('.tb-boxes');
+        
+        // Initialize sum variable
+        let sum = 0;
+    
+        // Loop through each checkbox and add its value if checked
+        checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                sum += parseFloat(checkbox.value); // Convert value to float and add to sum
+            }
+        });
+    
+        // Display the result
+        document.getElementById('tb-score-result').textContent = 'Sum: ' + sum;
+    }
+
+    // Add event listeners to all checkboxes
+    document.querySelectorAll('.tb-boxes').forEach(checkbox => {
+        checkbox.addEventListener('click', calculateSum);
+    });
+    
 
 };
