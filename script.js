@@ -72,6 +72,8 @@ function tbScore(){
 function goBack(){
     const scoresDisplay = document.querySelector('.scores-display');
     const scoreList = document.querySelector('#score-list')
+    const backbutton = document.getElementById('back-button');
     scoresDisplay.style = "display: none;";
     scoreList.style = "display: relative";
+    backbutton.style = "display: none";
 }
