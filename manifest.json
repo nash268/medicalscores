@@ -3,7 +3,7 @@
     "name": "Medical Scores",
     "icons": [
       {
-        "src": "medicalscores/medical-scores.png",
+        "src": "/medical-scores.png",
         "sizes": "512x512",
         "type": "image/png"
       }
