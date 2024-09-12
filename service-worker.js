@@ -8,7 +8,7 @@ const urlsToCache = [
     '${GH_PATH}/index.html',
     '${GH_PATH}/script.js',
     '${GH_PATH}/style.css',
-    '${GH_PATH}/medical-scores.png'
+    //'${GH_PATH}/medical-scores.png'
 ];
 
 self.addEventListener('install', (event) => {
