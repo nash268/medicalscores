@@ -83,12 +83,12 @@ function tbScore(){
     });
     
 
-    const closeContactExplanation = "Close Contact: history of cough for more than 2 weeks among the household of child (score 1), contact tracing is required B-ve TB patients among the households (score 2), may or may not be receiving/completed anti tuberculous treatment households B+ve TB patient among the (score 3). May or may not be receiving/completed anti tuberculous treatment";
+    const closeContactExplanation = "Close Contact: History of cough for more than 2 weeks among the household of child (score 1), contact tracing is required \nB-ve TB patients among the households (score 2), may or may not be receiving/completed anti tuberculosis treatment \nhouseholds B+ve TB patient among the (score 3). May or may not be receiving/completed anti tuberculous treatment";
     document.getElementById("close-contact").addEventListener('click', () => {
         alert(closeContactExplanation);
     });
 
-    const pemsamExplanation = "PEM/SAM(Protein Energy Malnutriion/Severe acute malnutrition) Use WHO Recommended Z. Scoring chart Not responding to Nutritional rehabilitation for 02 months";
+    const pemsamExplanation = "PEM/SAM(Protein Energy Malnutriion/Severe acute malnutrition) Use WHO Recommended Z. Scoring chart \nNot responding to Nutritional rehabilitation for 02 months";
     document.getElementById("pem-sam").addEventListener('click', () => {
         alert(pemsamExplanation);
     });
@@ -98,12 +98,12 @@ function tbScore(){
         alert(immunoExplanation);
     });
 
-    const clinicManExp = "Clinical Manifestation Suggesive of TB: Pulmonary Findings (unilateral wheeze, dullness), weight loss, Hepato- splenomegaly, Lymphadenopathy, ascites etc. Strongly suggestive of TB: Matted lymph nodes, abdominal mass or doughy abdomen, sinus formation, gibbous formation, chronic mono arthriis, meningeal indings (bulging fontanel, irritability, choroid tubercle, papilledema)";
+    const clinicManExp = "Clinical Manifestation Suggesive of TB: Pulmonary Findings (unilateral wheeze, dullness), weight loss, Hepato-splenomegaly, Lymphadenopathy, ascites etc. \nStrongly suggestive of TB: Matted lymph nodes, abdominal mass or doughy abdomen, sinus formation, gibbous formation, chronic mono arthriis, meningeal indings (bulging fontanel, irritability, choroid tubercle, papilledema)";
     document.getElementById("clinic-man").addEventListener('click', () => {
         alert(clinicManExp);
     });
 
-    const radioExp = "Radio-Diagnostic/ imaging studies includes Chest X-ray, CT Chest/MRI etc. Non-speciic Ill-deined opacity or patchy infiltrates on chest X-Ray, marked broncho-vacular marking. Suggestive of TB: Consolidaion not responding to anibioic therapy, Para-tracheal, or mediasinal lymphadenopathy Strongly suggestive: Miliary Mottling, cavitation, Tuberculoma on CAT scan/MRI brain, collapse vertebrae etc."; 
+    const radioExp = "Radio-Diagnostic/ imaging studies includes Chest X-ray, CT Chest/MRI etc. Non-specific Ill-defined opacity or patchy infiltrates on chest X-Ray, marked broncho-vacular marking. \nSuggestive of TB: Consolidaion not responding to anibioic therapy, Para-tracheal, or mediastinal lymphadenopathy \nStrongly suggestive: Miliary Mottling, cavitation, Tuberculoma on CAT scan/MRI brain, collapse vertebrae etc."; 
     document.getElementById("radio-img").addEventListener('click', () => {
         alert(radioExp);
     });
