@@ -1,5 +1,5 @@
 // service-worker.js
-const CACHE_NAME = 'medscore-cache-00015';
+const CACHE_NAME = 'medscore-cache-00016';
 const GH_PATH = '/medicalscores';
 const APP_PREFIX = 'medscore_';
 
