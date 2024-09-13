@@ -9,7 +9,7 @@
 
     "icons": [
         {
-          "src": "/medicalscores/medical-scores.png",
+          "src": "/medicalscores/app-icon.png",
           "sizes": "512x512",
           "type": "image/png"
         }

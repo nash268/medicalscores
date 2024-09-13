@@ -1,5 +1,5 @@
 // service-worker.js
-const CACHE_NAME = 'medscore-cache-13';
+const CACHE_NAME = 'medscore-cache-14';
 const GH_PATH = '/medicalscores';
 const APP_PREFIX = 'medscore_';
 
@@ -8,7 +8,7 @@ const urlsToCache = [
     '/medicalscores/index.html',
     '/medicalscores/script.js',
     '/medicalscores/style.css',
-    '/medicalscores/medical-scores.png'
+    '/medicalscores/app-icon.png'
 ];
 
 self.addEventListener('install', (event) => {
