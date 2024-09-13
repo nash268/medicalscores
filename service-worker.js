@@ -8,7 +8,8 @@ const urlsToCache = [
     '/medicalscores/index.html',
     '/medicalscores/script.js',
     '/medicalscores/style.css',
-    '/medicalscores/app-icon.png'
+    '/medicalscores/app-icon.png',
+    '/medicalscores/tb-treatment-guidlines.jpg'
 ];
 
 self.addEventListener('install', (event) => {
