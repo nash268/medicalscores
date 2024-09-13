@@ -77,9 +77,62 @@ function tbScore(){
         }
     }
 
+    function getTreatment(){
+
+        const tbCat = document.getElementById('tb-cat').value;
+        let treatmentDuration = "";
+        
+        const weight = document.getElementById('weight').value ;
+        let txDosage = "";
+
+
+        if (weight < 2){
+            txDosage = ["1/4 of - HRZ(50,75,150) + E(100)", "1/4 of - HR(50,75)"];
+        }else if(weight >= 2 && weight < 3){
+            txDosage = ["1/2 of - HRZ(50,75,150) + E(100)", "1/2 of - HR(50,75)"];
+        }else if(weight >= 3 && weight < 4){
+            txDosage = ["3/4 of - HRZ(50,75,150) + E(100)", "3/4 of - HR(50,75)"];
+        }else if(weight >= 4 && weight < 8){
+            txDosage = ["1 each - HRZ(50,75,150) + E(100)", "1 - HR(50,75)"];
+        }else if(weight >= 8 && weight < 12){
+            txDosage = ["2 each - HRZ(50,75,150) + E(100)", "2 - HR(50,75)"];
+        }else if(weight >= 12 && weight < 16){
+            txDosage = ["3 each - HRZ(50,75,150) + E(100)", "3 - HR(50,75)"];
+        }else if(weight >= 16 && weight < 25){
+            txDosage = ["4 - HRZ(50,75,150) + E(100)", "4 - HR(50,75)"];
+        }else if(weight >= 25 && weight < 40){
+            txDosage = ["2 - HRZE(75,150,400,275)", "2 - HR(75,150)"];
+        }else if(weight >= 40 && weight < 55){
+            txDosage = ["3 - HRZE(75,150,400,275)", "3 - HR(75,150)"];
+        }else if(weight >= 55){
+            txDosage = ["4 - HRZE(75,150,400,275)", "4 - HR(75,150)"];
+        }
+
+        if (tbCat == "norm-tb"){
+            treatmentDuration =  ['2 months', '4 months'];
+        }else if (tbCat == "re-tx"){
+            treatmentDuration = ['3 months', '5 months'];
+        }else if (tbCat == 'tb-mb'){
+            treatmentDuration = ['2 months', '10 months'];
+        }else if (tbCat == "dr-tb"){
+            treatmentDuration = ["", ""];
+            alert("Refer to Specialist/PMDT treatment site!!");
+            txDosage = ["",""];
+        }
+
+        document.getElementById('intensive-duration').textContent = 'Intensive Phase ' + treatmentDuration[0];
+        document.getElementById('continuation-duration').textContent = 'Continuation Phase ' + treatmentDuration[1];
+        document.getElementById('intensive-dose').textContent = txDosage[0];
+        document.getElementById('continuation-dose').textContent = txDosage[1];
+    }
+
     // Add event listeners to all checkboxes
     document.querySelectorAll('.tb-boxes').forEach(checkbox => {
         checkbox.addEventListener('click', calculateSum);
+    });
+
+    document.querySelectorAll('.treatment-table').forEach(i => {
+        i.addEventListener('change', getTreatment);
     });
     
 

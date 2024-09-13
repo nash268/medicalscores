@@ -150,7 +150,32 @@
           <td colspan="6" id="interpretation"></td>
         </tr>
         <tr>
-          <td colspan="6"><a href="/medicalscores/tb-treatment-guidlines.jpg"><b>treatment guidlines</b></a></td>
+          <td colspan="6">
+            <label for="tb-cat">Select TB disease category:</label>
+            <select name="tb-cat-list" id="tb-cat" class="treatment-table">
+              <option value="norm-tb">All forms of TB(except Meningitis, bone involvement)</option>
+              <option value="re-tx">Re-treatment cases</option>
+              <option value="tb-mb">TB Meningitis, bones, joints</option>
+              <option value="dr-tb">Drug resistant TB</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="6">
+            <label for="weight">Weight(kg):</label>
+            <input type="number" name="weight" id="weight" class="treatment-table" value="2.5"></input>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="3"><a href="/medicalscores/tb-treatment-guidlines.jpg"><b>treatment guidlines</b></a></th>
+        </tr>
+        <tr>
+          <th id="intensive-duration">Intensive Phase 2 months</th>
+          <th id="continuation-duration">Continuation Phase 4 months</th>
+        </tr>
+        <tr>
+          <td id="intensive-dose">1/2 of - HRZ(50,75,150) + E(100)</td>
+          <td id="continuation-dose">1/2 of - HR(50,75)</td>
         </tr>
       </table>
     </div>
