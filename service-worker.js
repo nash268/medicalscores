@@ -18,6 +18,7 @@ self.addEventListener('install', (event) => {
       console.log("app cached!");
     })
   );
+  self.skipWaiting();
 });
 
 // Activate event: Clean up old caches and take control of clients
