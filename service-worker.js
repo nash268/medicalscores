@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medscore-cache-00020';
+const CACHE_NAME = 'medscore-cache-00021';
 const APP_PREFIX = 'medscore_';
 
 const urlsToCache = [
@@ -18,6 +18,7 @@ self.addEventListener('install', (event) => {
     })
   );
   self.skipWaiting();
+  console.log("app installed!");
 });
 
 // Activate event: Clean up old caches and take control of clients
@@ -29,11 +30,13 @@ self.addEventListener('activate', (event) => {
           if (cacheName !== CACHE_NAME) {
             return caches.delete(cacheName); // Delete old caches
           }
+          console.log("old cache deleted!");
         })
       );
     })
   );
   self.clients.claim(); // Take control of all pages under scope
+  console.log("old cache deleted!");
 });
 
 // Fetch event: Use stale-while-revalidate strategy
