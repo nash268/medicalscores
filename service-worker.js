@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medscore-cache-00025';
+const CACHE_NAME = 'medscore-cache-00026';
 const APP_PREFIX = 'medscore_';
 
 const urlsToCache = [
@@ -50,7 +50,7 @@ self.addEventListener('fetch', (event) => {
           return cachedResponse || fetch(event.request); // If network fails, return cached response
         });
 
-        return cachedResponse || fetchPromise; // Return cached or fetched response
+        return fetchPromise || cachedResponse; // Return cached or fetched response
       });
     })
   );
