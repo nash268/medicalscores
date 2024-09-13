@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medscore-cache-00023';
+const CACHE_NAME = 'medscore-cache-00024';
 const APP_PREFIX = 'medscore_';
 
 const urlsToCache = [
@@ -15,7 +15,6 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(urlsToCache);
-      console.log("app cached!");
     })
   );
   self.skipWaiting();
