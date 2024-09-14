@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medscore-cache-00029';
+const CACHE_NAME = 'medscore-cache-00030';
 const APP_PREFIX = 'medscore_';
 
 const urlsToCache = [

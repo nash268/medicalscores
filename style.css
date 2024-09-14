@@ -174,3 +174,9 @@
   .modal-content a {
     line-height: 2;
   }
+
+  table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
