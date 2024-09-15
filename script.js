@@ -136,6 +136,7 @@ function tbScore(){
         input.addEventListener('change', getTreatment);
     });
 
+    // toggle explanation popup
     let explanationVisible = false;
     function showExplanations(event){
         if (!explanationVisible){
@@ -156,6 +157,7 @@ function tbScore(){
 
 };
 
+// hide all windows and go back to main screen
 function goBack(){
     const scoresDisplay = document.querySelector('.scores-display');
     const scoreList = document.querySelector('#score-list')
