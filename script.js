@@ -135,12 +135,22 @@ function tbScore(){
     document.querySelectorAll('.treatment-table').forEach(input => {
         input.addEventListener('change', getTreatment);
     });
+
+    let explanationVisible = false;
+    function showExplanations(event){
+        if (!explanationVisible){
+            event.currentTarget.children[0].classList.add('show');
+            explanationVisible = true;
+        }else
+        if (explanationVisible){
+            event.currentTarget.children[0].classList.remove('show');
+            explanationVisible = false;
+        }
+    }
     
     // click for popup explanation
     document.querySelectorAll('.popup').forEach(popup => {
-        popup.addEventListener('click', function(){
-            this.children[0].classList.toggle("show");
-        });
+        popup.addEventListener('click', showExplanations);
     });
 
 
@@ -154,4 +164,8 @@ function goBack(){
     scoreList.style = "display: relative";
     backbutton.style = "display: none";
     document.querySelector('header').hidden = false;
+
+    document.querySelectorAll('.popup').forEach(popup => {
+        popup.removeEventListener('click', showExplanations);
+    });
 }
